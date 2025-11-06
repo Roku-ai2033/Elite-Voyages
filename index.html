@@ -1,0 +1,94 @@
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Voyages - Монголын Аялал Жуулчлал</title>
+    <meta name="description" content="Elite Voyages - Монгол дахь шилдэг аялал жуулчлалын үйлчилгээ. Хөвсгөл нуур, УБ-Дархан-Эрдэнэт-Булган-Мөрөн-Хатгал маршрут. Утас: +976-89632553">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Elite Voyages</h1>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <nav id="mainNav">
+                <a href="#home">Нүүр</a>
+                <a href="#tours">Аяллууд</a>
+                <a href="#contact">Холбоо барих</a>
+                <a href="tel:+97689632553" class="btn-call">📞 +976-89632553</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Elite Voyages</h1>
+            <p class="hero-subtitle">Gen Z-д зориулсан аялалууд</p>
+            <br>
+            <div class="hero-buttons">
+                <a href="#tours" class="btn btn-primary">Аяллууд үзэх</a>
+                <a href="#contact" class="btn btn-secondary">Холбоо барих</a>
+            </div>
+        </div>
+        <a href="#tours" class="scroll-down">↓</a>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours" class="section">
+        <div class="container">
+            <h2 class="section-title">Манай Аяллууд</h2>
+            <p class="section-subtitle">Монголын гайхамшигт байгалийг танилцуулах аялалын багцууд</p>
+            
+            <div class="tours-grid">
+
+                <!-- Tour 1 -->
+                <div class="tour-card">
+                    <img src="https://www.explore.com/img/gallery/a-massive-lake-in-mongolia-with-caribbean-like-waters-is-a-paradise-for-outdoor-lovers/l-intro-1734437159.jpg" class="tour-image">
+                    
+                    <div class="tour-content">
+                        <span class="tour-duration">9 шөнө / 10 өдөр</span>
+                        <h3 class="tour-title">Хөвсгөл Далай - Хатгал</h3>
+                        <p class="tour-route">📍 УБ → Дархан → Эрдэнэт → Булган → Мөрөн → Хатгал</p>
+                        <p class="tour-description">УБ → Мөрөн нислэг, Мөрөн → Хатгал автобус</p>
+                        <div class="tour-price">1800 км</div>
+                        <button id="openOverlay" class="btn-learn-more">Дэлгэрэнгүй</button>
+                    </div>
+                </div>
+
+                <!-- Tour 2 -->
+                <div class="tour-card">
+                    <img src="http://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZSV1WA0aaTSfUeBC2g5N56Ar19g5j5Sdn-qkyF8DGsZC7-_Eql-uwyqY6pmEEuSumGZ-rEAxgPrj25qQ67MylyuaESQtYVjk6712jac-crV6FQBy_5t9zlFw_FFchyRg5nsbcJLeCb4M/s1600/ugii.jpg" class="tour-image">
+                    <div class="tour-content">
+                        <span class="tour-duration">3 шөнө / 4 өдөр</span>
+                        <h3 class="tour-title">Архангай - Өгий нуур</h3>
+                        <p class="tour-route">📍 УБ → Лүн → Өгий нуур</p>
+                        <div class="tour-price">343 км</div>
+                        <button class="btn-learn-more">Дэлгэрэнгүй</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact + Footer (unchanged) -->
+    <!-- ... keep your original contact + footer code here ... -->
+
+    <!-- ✅ Overlay (NOW moved outside card) -->
+    <div id="overlay">
+      <div class="overlay-content">
+          <h2>Хөвсгөл аяллын дэлгэрэнгүй</h2>
+          <p>Энд өдрөөр нь хөтөлбөрийн мэдээлэл оруулна.</p>
+          <button id="closeOverlay" class="btn-learn-more">Хаах</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
