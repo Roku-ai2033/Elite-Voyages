@@ -35,3 +35,7 @@ function handleSubmit(event) {
     alert("Таны мессеж амжилттай илгээгдлээ! Бид удахгүй холбогдох болно.");
     event.target.reset();
 }
+function toggleMobileMenu() {
+    const nav = document.getElementById("mainNav");
+    nav.classList.toggle("active");  // Toggle 'active' class to show/hide the menu
+}
