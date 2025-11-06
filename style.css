@@ -515,7 +515,7 @@ footer {
         padding: 2rem;
         box-shadow: 0 4px 12px rgba(92, 74, 58, 0.1);
         width: 100%;
-        max-width: 600px; /* Limit the width of the contact card */
+        max-width: 90vw; /* Limit the width of the contact card */
         margin: 0 auto;
     }
      .contact-grid {
