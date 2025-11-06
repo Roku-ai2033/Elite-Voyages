@@ -527,8 +527,12 @@ footer {
         align-items: center;
     }
     .list{
-        max-width: 85%;
+        max-width: 80%;
         
+    }
+    .contact-item{
+        display: flex;
+        text-align: left;
     }
 
 
