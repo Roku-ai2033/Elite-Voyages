@@ -522,9 +522,12 @@ footer {
         display: grid;
         grid-template-columns: 1fr; /* Stack items vertically */
         gap: 1.5rem;
-        max-width: 80vw;
+        width: 100%;
         box-sizing: border-box;
         align-items: center;
+    }
+    .list{
+        max-width: 80%;
     }
 
 
