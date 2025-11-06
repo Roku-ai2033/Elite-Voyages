@@ -271,11 +271,13 @@ nav a:hover {
 .overlay-content {
     background: white;
     width: 90%;
-    max-width: 500px;
+    max-width: 95vw;
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
     animation: fadeIn .25s ease;
+  
+     
 }
 
 /* Contact Section */
