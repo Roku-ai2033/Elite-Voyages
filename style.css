@@ -410,7 +410,7 @@ nav a:hover {
     nav {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 100vw;
         background: var(--color-cream);
         border-top: 1px solid var(--color-beige);
         padding: 1rem;
