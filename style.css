@@ -403,3 +403,35 @@ nav a:hover {
     from { opacity: 0; transform: scale(.95); }
     to { opacity: 1; transform: scale(1); }
 }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    /* Хэвийн менюг нуух */
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--color-cream);
+        border-top: 1px solid var(--color-beige);
+        padding: 1rem;
+        text-align: center;
+    }
+
+    /* Hamburger → харагддаг болно */
+    .mobile-menu-btn {
+        display: block;
+        font-size: 2rem;
+        color: var(--color-primary);
+    }
+
+    /* Хэрэглэгч дарсан үед меню нээгдэнэ */
+    nav.active {
+        display: flex;
+    }
+
+    /* Лого болон header зай */
+    .header-container {
+        padding: 0 1rem;
+    }
+}
+
