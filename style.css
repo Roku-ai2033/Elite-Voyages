@@ -524,13 +524,10 @@ footer {
         gap: 1.5rem;
         width: 100%;
         box-sizing: border-box;
+        align-items: center;
     }
 
 
-    /* Contact Section Layout */
-    .contact-grid {
-        grid-template-columns: 1fr; /* Stack the contact items vertically */
-    }
 
     /* Footer */
     .footer-grid {
