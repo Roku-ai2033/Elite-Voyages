@@ -479,6 +479,33 @@ footer {
         height: 200px; /* Reduce height for smaller screens */
         object-fit: cover;
     }
+     .contact-section {
+        background-color: rgba(212, 196, 168, 0.3);
+        padding: 3rem 2rem;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Horizontally center */
+        align-items: center; /* Vertically center */
+        min-height: 100vh; /* Full viewport height */
+    }
+     .contact-card {
+        background-color: #F0EAE0;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 12px rgba(92, 74, 58, 0.1);
+        width: 100%;
+        max-width: 600px; /* Limit the width of the contact card */
+        margin: 0 auto;
+    }
+     .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack items vertically */
+        gap: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
 
     /* Contact Section Layout */
     .contact-grid {
