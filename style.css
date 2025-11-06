@@ -88,7 +88,8 @@ nav a:hover {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: var(--color-primary);
 }
 
 /* Hero Section */
@@ -150,6 +151,7 @@ nav a:hover {
     background-color: var(--color-primary);
     color: white;
 }
+
 .btn-primary:hover { background-color: #240077; }
 
 .btn-secondary {
@@ -187,12 +189,6 @@ nav a:hover {
 }
 
 /* Tour Cards */
-
-
-.section, .tour-card, .contact-card {
-    box-sizing: border-box;
-    width: 100%;
-}
 .tours-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -235,6 +231,7 @@ nav a:hover {
 }
 
 .tour-route { margin: .5rem 0; }
+
 .tour-price {
     border-top: 1px solid var(--color-beige);
     margin-top: 1rem;
@@ -255,34 +252,14 @@ nav a:hover {
     cursor: pointer;
     margin-top: 1rem;
 }
+
 .btn-learn-more:hover { background: #240077; }
-
-/* ✅ Overlay */
-#overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.65);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-}
-
-.overlay-content {
-    background: white;
-    width: 90%;
-    max-width: 500px;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    animation: fadeIn .25s ease;
-}
 
 /* Contact Section */
 .contact-section {
     background-color: rgba(212, 196, 168, 0.3);
     width: 100%;
-    box-sizing: border-box; /* Prevent padding from affecting width */
+    box-sizing: border-box;
 }
 
 .contact-card {
@@ -292,7 +269,7 @@ nav a:hover {
     border-radius: 12px;
     padding: 3rem;
     box-shadow: 0 4px 12px rgba(92, 74, 58, 0.1);
-    width: 100%; /* Ensure the card doesn't overflow */
+    width: 100%;
 }
 
 .contact-grid {
@@ -300,7 +277,7 @@ nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     width: 100%;
-    box-sizing: border-box; /* Prevent grid items from overflowing */
+    box-sizing: border-box;
 }
 
 .contact-item {
@@ -313,7 +290,7 @@ nav a:hover {
     text-decoration: none;
     color: var(--color-dark-brown);
     transition: background-color 0.2s;
-    width: 100%; /* Prevent item from overflowing */
+    width: 100%;
 }
 
 .contact-item:hover {
@@ -424,18 +401,22 @@ footer {
     background-color: rgba(139, 111, 71, 0.3);
 }
 
-/* Mobile Responsive */
+/* Mobile Menu */
 @media (max-width: 768px) {
-    /* Header */
     .header-container {
-        padding: 0 1rem;
+        padding: 0 1rem; /* Reduce padding on smaller screens */
     }
 
-    /* Mobile Menu */
+    /* Mobile Menu Button (Hamburger) */
+    .mobile-menu-btn {
+        display: block; /* Show the hamburger button */
+    }
+
+    /* Mobile Navigation */
     nav {
-        display: none;
-        flex-direction: column;
-        width: 100vw;
+        display: none; /* Initially hide the nav */
+        flex-direction: column; /* Stack links vertically */
+        width: 100vw; /* Ensure it takes full width */
         background: var(--color-cream);
         border-top: 1px solid var(--color-beige);
         padding: 1rem;
@@ -445,86 +426,22 @@ footer {
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 1000;
+        z-index: 1000; /* Ensure it's on top */
     }
 
-    /* Hamburger button for mobile */
-    .mobile-menu-btn {
-        display: block;
-        font-size: 2rem;
-        color: var(--color-primary);
-    }
-
+    /* Show the navigation when the active class is added */
     nav.active {
         display: flex;
     }
 
-    /* Hero Section */
-    .hero {
-        height: 60vh;
+    nav a {
+        padding: 1rem;
+        font-size: 1.25rem;
+        color: var(--color-dark-brown);
+        text-decoration: none;
     }
 
-    /* Tour Cards and Sections */
-    .tours-grid {
-        grid-template-columns: 1fr; /* Stack all tour cards vertically */
-    }
-
-    .tour-card {
-        max-width: 100%;
-        width: 100%; /* Ensure they stay within the screen */
-        padding: 1rem; /* Reduce padding if necessary */
-    }
-
-    .tour-image {
-        height: 200px; /* Reduce height for smaller screens */
-        object-fit: cover;
-    }
-     .contact-section {
-        background-color: rgba(212, 196, 168, 0.3);
-        padding: 3rem 2rem;
-        box-sizing: border-box;
-        width: 100%;
-        display: flex;
-        justify-content: center; /* Horizontally center */
-        align-items: center; /* Vertically center */
-        min-height: 100vh; /* Full viewport height */
-    }
-     .contact-card {
-        background-color: #F0EAE0;
-        border-radius: 12px;
-        padding: 2rem;
-        box-shadow: 0 4px 12px rgba(92, 74, 58, 0.1);
-        width: 100%;
-        max-width: 600px; /* Limit the width of the contact card */
-        margin: 0 auto;
-    }
-     .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr; /* Stack items vertically */
-        gap: 1.5rem;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-
-    /* Contact Section Layout */
-    .contact-grid {
-        grid-template-columns: 1fr; /* Stack the contact items vertically */
-    }
-
-    /* Footer */
-    .footer-grid {
-        grid-template-columns: 1fr; /* Stack footer items */
-    }
-
-    /* Adjust contact form input width */
-    .form-input {
-        width: 100%;
-    }
-    .contact-form{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+    nav a:hover {
+        background-color: rgba(139, 111, 71, 0.1);
     }
 }
