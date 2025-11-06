@@ -426,7 +426,12 @@ footer {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    /* Hide regular menu */
+    /* Header */
+    .header-container {
+        padding: 0 1rem;
+    }
+
+    /* Mobile Menu */
     nav {
         display: none;
         flex-direction: column;
@@ -435,23 +440,23 @@ footer {
         border-top: 1px solid var(--color-beige);
         padding: 1rem;
         text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
     }
 
-    /* Hamburger button visible */
+    /* Hamburger button for mobile */
     .mobile-menu-btn {
         display: block;
         font-size: 2rem;
         color: var(--color-primary);
     }
 
-    /* Show mobile menu when active */
     nav.active {
         display: flex;
-    }
-
-    /* Adjust header padding for mobile */
-    .header-container {
-        padding: 0 1rem;
     }
 
     /* Hero Section */
@@ -459,30 +464,34 @@ footer {
         height: 60vh;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    /* Tour Cards and Sections */
+    .tours-grid {
+        grid-template-columns: 1fr; /* Stack all tour cards vertically */
     }
 
-    .hero-subtitle {
-        font-size: 1.5rem;
+    .tour-card {
+        max-width: 100%;
+        width: 100%; /* Ensure they stay within the screen */
+        padding: 1rem; /* Reduce padding if necessary */
     }
 
-    .btn-primary, .btn-secondary {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
+    .tour-image {
+        height: 200px; /* Reduce height for smaller screens */
+        object-fit: cover;
     }
 
-    /* Contact Form */
-    .contact-form {
-        gap: 0.5rem;
-    }
-
-    .form-input {
-        font-size: 0.9rem;
+    /* Contact Section Layout */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack the contact items vertically */
     }
 
     /* Footer */
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr; /* Stack footer items */
+    }
+
+    /* Adjust contact form input width */
+    .form-input {
+        width: 100%;
     }
 }
