@@ -522,7 +522,7 @@ footer {
         display: grid;
         grid-template-columns: 1fr; /* Stack items vertically */
         gap: 1.5rem;
-        width: 100%;
+        max-width: 80vw;
         box-sizing: border-box;
         align-items: center;
     }
