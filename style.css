@@ -425,79 +425,93 @@ footer {
 }
 
 /* Mobile Responsive */
+/* Mobile Contact Section Centering */
 @media (max-width: 768px) {
-    /* Header */
-    .header-container {
-        padding: 0 1rem;
-    }
-
-    /* Mobile Menu */
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100vw;
-        background: var(--color-cream);
-        border-top: 1px solid var(--color-beige);
-        padding: 1rem;
-        text-align: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1000;
-    }
-
-    /* Hamburger button for mobile */
-    .mobile-menu-btn {
-        display: block;
-        font-size: 2rem;
-        color: var(--color-primary);
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    /* Hero Section */
-    .hero {
-        height: 60vh;
-    }
-
-    /* Tour Cards and Sections */
-    .tours-grid {
-        grid-template-columns: 1fr; /* Stack all tour cards vertically */
-    }
-
-    .tour-card {
-        max-width: 100%;
-        width: 100%; /* Ensure they stay within the screen */
-        padding: 1rem; /* Reduce padding if necessary */
-    }
-
-    .tour-image {
-        height: 200px; /* Reduce height for smaller screens */
-        object-fit: cover;
-    }
-
-    /* Contact Section Layout */
-    .contact-grid {
-        grid-template-columns: 1fr; /* Stack the contact items vertically */
-    }
-
-    /* Footer */
-    .footer-grid {
-        grid-template-columns: 1fr; /* Stack footer items */
-    }
-
-    /* Adjust contact form input width */
-    .form-input {
+    /* Contact Section */
+    .contact-section {
+        background-color: rgba(212, 196, 168, 0.3);
+        padding: 3rem 2rem;
+        box-sizing: border-box;
         width: 100%;
+        display: flex;
+        justify-content: center; /* Horizontally center */
+        align-items: center; /* Vertically center */
+        min-height: 100vh; /* Full viewport height */
     }
-    .contact-form{
+
+    /* Contact Card */
+    .contact-card {
+        background-color: #F0EAE0;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 12px rgba(92, 74, 58, 0.1);
+        width: 100%;
+        max-width: 600px; /* Limit the width of the contact card */
+        margin: 0 auto;
+    }
+
+    /* Contact Grid - Stack the items vertically on mobile */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack items vertically */
+        gap: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Contact Items - Stack vertically and keep it centered */
+    .contact-item {
         display: flex;
         align-items: center;
-        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid var(--color-beige);
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--color-dark-brown);
+        transition: background-color 0.2s;
+        width: 100%; /* Full width on mobile */
+    }
+
+    /* Contact Item Hover Effect */
+    .contact-item:hover {
+        background-color: rgba(139, 111, 71, 0.05);
+    }
+
+    /* Form Styling - Ensuring it is full width and responsive */
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         width: 100%;
+    }
+
+    /* Form Inputs - Full width on mobile */
+    .form-input {
+        padding: 1rem;
+        border: 1px solid var(--color-beige);
+        border-radius: 6px;
+        font-size: 1rem;
+        font-family: 'Noto Sans', sans-serif;
+        background-color: var(--color-cream);
+        width: 100%; /* Ensure inputs are full width */
+    }
+
+    /* Form Input Focus Styling */
+    .form-input:focus {
+        outline: 2px solid var(--color-primary);
+    }
+
+    /* Button Styling */
+    .btn-learn-more {
+        width: 100%; /* Button full width */
+        background-color: var(--color-primary);
+        color: white;
+        padding: 1rem;
+        border-radius: 6px;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 1rem;
     }
 }
